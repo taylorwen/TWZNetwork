@@ -1,0 +1,26 @@
+source 'https://gitlab.0easy.com/hybrid/LYSpecRep.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LYNetwork_Example' do
+  
+    pod 'LYNetwork', :path => '../'
+
+  target 'LYNetwork_Tests' do
+    inherit! :search_paths
+
+  end
+end
+
+
+#    验证
+
+#   pod lib lint --sources='https://gitlab.0easy.com/hybrid/LYSpecRep.git,https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries
+
+#    pod spec lint --allow-warnings --use-libraries
+
+#    更新 repo
+#    pod repo push LYSpecRep LYNetwork.podspec --sources='https://gitlab.0easy.com/hybrid/LYSpecRep.git,https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries

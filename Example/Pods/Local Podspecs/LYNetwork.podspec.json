@@ -1,0 +1,73 @@
+{
+  "name": "LYNetwork",
+  "version": "1.2.5",
+  "summary": "一号社区，网络组件",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://gitlab.0easy.com/hybrid/LYNetwork",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhangdaokui": "zhangdaokui@0easy.com"
+  },
+  "source": {
+    "git": "https://gitlab.0easy.com/hybrid/LYNetwork.git",
+    "tag": "1.2.5"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "xcconfig": {
+    "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF": "NO"
+  },
+  "subspecs": [
+    {
+      "name": "Lib",
+      "source_files": "LYNetwork/Classes/Lib/**/*.{h,m}",
+      "public_header_files": "LYNetwork/Classes/Lib/**/*.h",
+      "frameworks": [
+        "UIKit",
+        "Foundation",
+        "MobileCoreServices",
+        "AVFoundation",
+        "Photos",
+        "AssetsLibrary",
+        "Security",
+        "SystemConfiguration"
+      ],
+      "dependencies": {
+        "AFNetworking": [
+          "~> 3.1.0"
+        ],
+        "HappyDNS": [
+          "~> 0.3.10"
+        ]
+      }
+    },
+    {
+      "name": "Core",
+      "source_files": "LYNetwork/Classes/Core/**/*.{h,m}",
+      "public_header_files": "LYNetwork/Classes/Core/**/*.h",
+      "frameworks": [
+        "UIKit",
+        "Foundation",
+        "Security",
+        "SystemConfiguration",
+        "MobileCoreServices"
+      ],
+      "dependencies": {
+        "AFNetworking": [
+          "~> 3.1.0"
+        ],
+        "SVProgressHUD": [
+
+        ],
+        "LYNetwork/Lib": [
+
+        ]
+      }
+    }
+  ]
+}

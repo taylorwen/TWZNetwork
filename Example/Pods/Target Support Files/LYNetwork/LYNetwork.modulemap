@@ -1,0 +1,6 @@
+framework module LYNetwork {
+  umbrella header "LYNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

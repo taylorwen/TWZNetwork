@@ -1,0 +1,6 @@
+framework module Pods_LYNetwork_Example {
+  umbrella header "Pods-LYNetwork_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
